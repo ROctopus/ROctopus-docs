@@ -1,0 +1,57 @@
+/* api format version 0.1.0 */
+
+/* client requests */
+
+{
+  "submit_job": {
+    "meta": {
+      "version": "Character of api version",
+      "jobId":  "Generated unique string based on username and time + hash",
+      "user": "Unique username",
+      "numTasks": "Integer of the number of tasks in the job",
+      "fileSize": "Numeric of the file size in bytes",
+      "notify": "Character for now (none/email/something)",
+      "requirements": {
+        "memory": "Integer of estimated ram",
+        "cpuTime": "Integer of seconds",
+        "packages": [
+          { 
+            "name": "Character of package name",
+            "version": "Character of version",
+            "repo": "CRAN"
+          },
+          { 
+            "name": "Character of package name",
+            "version": "Character of version",
+            "repo": "CRAN"
+          }
+        ],
+        "RVersion": "Character of R version",
+        "cores": "Integer of core count, always 1 for now"
+      }
+    },
+    "content": "buffer of zipped folder"
+  }
+}
+
+
+/* Server responses */
+
+{
+  "err": {
+    "-1": {
+      "type": "generic",
+      "msg": "",
+      "description": "",
+      "action": ""
+    }
+  },
+  "msg": {
+    "1": {
+      "type": "queue",
+      "msg": "Job successfully queued",
+      "description": "The job was processed and added to the queue",
+      "action": "continue"
+    }
+  }
+}
