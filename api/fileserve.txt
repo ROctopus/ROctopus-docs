@@ -1,0 +1,34 @@
+# File folder structure
+
+[-] roctoserver
+    ########
+    Modular elements 
+    These can be moved to different locations if required
+    ########
+
+    [-] db 
+        - queue.db
+
+    [-] files
+        [-] user1
+            [-] AAD!!KMJS#
+                - rocto.zip
+                - result.rdata
+            [+] DJWH6@@K!0
+            .
+            .
+        [+] user2
+        [+] user3
+        .
+        .
+        
+    ########
+    Server elements
+    ########
+    [+] node_modules
+    [+] public ### this is the landing page
+    - rocto.js
+    - package.json
+    - init-db.js
+    - .git
+    - .gitignore
