@@ -12,7 +12,7 @@
       "fileSize": "Numeric of the file size in bytes",
       "notify": "Character for now (none/email/something)",
       "requirements": {
-        "memory": "Integer of estimated ram",
+        "memory": "Integer of estimated ram in MB",
         "cpuTime": "Integer of seconds",
         "packages": [
           { 
@@ -44,10 +44,16 @@
       "msg": "",
       "description": "",
       "action": ""
+    },
+    "7": {
+      "type": "queue",
+      "msg": "Job already exists",
+      "description": "Origin tried to add job that already exists in the database",
+      "action": [ "nothing", "retry" ]
     }
   },
   "msg": {
-    "1": {
+    "4": {
       "type": "queue",
       "msg": "Job successfully queued",
       "description": "The job was processed and added to the queue",

@@ -83,8 +83,14 @@
     },
     "2": {
       "type": "filesave",
-      "msg": "File successfully saved",
+      "msg": "Results successfully saved",
       "description": "The file was stored in the user's directory",
+      "action": "continue"
+    },
+    "3": {
+      "type": "filesave",
+      "msg": "Failed results saved",
+      "description": "The failed results were stored in the user's directory",
       "action": "continue"
     }
   }
