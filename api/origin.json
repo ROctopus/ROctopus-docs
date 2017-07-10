@@ -31,6 +31,12 @@
       }
     },
     "content": "buffer of zipped folder"
+  },
+  
+  "request_status": {
+    "version": "Character of api version",
+    "user": "Unique username",
+    "jobId": "Existing jobId"
   }
 }
 
@@ -38,6 +44,16 @@
 /* Server responses */
 
 {
+  "return_status": {
+    "version": "0.1.0",
+    "progress": "Value between 0 and 1 where 1 == 100%",
+    "status": {
+      "waiting": "int of waiting tasks",
+      "locked": "int of locked (running) tasks",
+      "finished": "int of finished tasks"
+    },
+    "failures": "Object (dictionary/JSON) of key/val pairs where key = tasknumber and val = int of number of failed attempts"
+  },
   "err": {
     "-1": {
       "type": "generic",
@@ -49,6 +65,12 @@
       "type": "queue",
       "msg": "Job already exists",
       "description": "Origin tried to add job that already exists in the database",
+      "action": [ "nothing", "retry" ]
+    },
+    "8": {
+      "type": "status",
+      "msg": "User or jobId not found",
+      "description": "Origin requested status on nonexisting job",
       "action": [ "nothing", "retry" ]
     }
   },
