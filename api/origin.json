@@ -37,6 +37,12 @@
     "version": "Character of api version",
     "user": "Unique username",
     "jobId": "Existing jobId"
+  },
+  
+  "request_results": {
+    "version": "Character of api version",
+    "user": "Unique username",
+    "jobId": "Existing jobId"
   }
 }
 
@@ -53,6 +59,10 @@
       "finished": "int of finished tasks"
     },
     "failures": "Object (dictionary/JSON) of key/val pairs where key = tasknumber and val = int of number of failed attempts"
+  },
+  "return_results": {
+    "version": "0.1.0",
+    "content": "base64 encoded .rocres file"
   },
   "err": {
     "-1": {
