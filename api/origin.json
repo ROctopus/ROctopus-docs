@@ -12,7 +12,7 @@
       "fileSize": "Numeric of the file size in bytes",
       "notify": "Character for now (none/email/something)",
       "requirements": {
-        "memory": "Integer of estimated ram in MB",
+        "memorySize": "Integer of estimated ram in MB",
         "cpuTime": "Integer of seconds",
         "packages": [
           { 
@@ -26,7 +26,7 @@
             "repo": "CRAN"
           }
         ],
-        "RVersion": "Character of R version",
+        "RInfo": "JSON of R info obtained by JSONifying R command 'as.list(unlist(version))'",
         "cores": "Integer of core count, always 1 for now"
       }
     },
