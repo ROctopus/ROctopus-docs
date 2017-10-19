@@ -17,13 +17,11 @@
         "packages": [
           { 
             "name": "Character of package name",
-            "version": "Character of version",
-            "repo": "CRAN"
+            "version": "Character of version"
           },
           { 
             "name": "Character of package name",
-            "version": "Character of version",
-            "repo": "CRAN"
+            "version": "Character of version"
           }
         ],
         "RInfo": "JSON of R info obtained by JSONifying R command 'as.list(unlist(version))'",
