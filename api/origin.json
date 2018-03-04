@@ -1,4 +1,4 @@
-/* api format version 0.1.0 */
+/* api format version 0.2.0 */
 
 /* client requests */
 
@@ -8,20 +8,22 @@
       "version": "Character of api version",
       "jobId":  "Generated unique string based on username and time + hash",
       "user": "Unique username",
-      "numTasks": "Integer of the number of tasks in the job",
+      "selectedTasks": "Integer vector of row indices (from 0) of the task grid rows",
       "fileSize": "Numeric of the file size in bytes",
       "notify": "Character for now (none/email/something)",
       "requirements": {
         "memorySize": "Integer of estimated ram in MB",
         "cpuTime": "Integer of seconds",
         "packages": [
-          { 
+          {
             "name": "Character of package name",
-            "version": "Character of version"
+            "version": "Character of version",
+            "repo": "CRAN"
           },
-          { 
+          {
             "name": "Character of package name",
-            "version": "Character of version"
+            "version": "Character of version",
+            "repo": "CRAN"
           }
         ],
         "RInfo": "JSON of R info obtained by JSONifying R command 'as.list(unlist(version))'",
@@ -30,13 +32,13 @@
     },
     "content": "buffer of zipped folder"
   },
-  
+
   "request_status": {
     "version": "Character of api version",
     "user": "Unique username",
     "jobId": "Existing jobId"
   },
-  
+
   "request_results": {
     "version": "Character of api version",
     "user": "Unique username",
